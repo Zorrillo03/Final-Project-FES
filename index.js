@@ -6,8 +6,12 @@ const movieListEl = document.querySelector(".movie-list");
 const movieListEl2 = document.querySelector(".movie-list2");
 const movieListEl3 = document.querySelector(".movie-list3");
 const searchResults = document.querySelector(".search-results");
-const getRidOfMovies = document.querySelector(".main__movie--wrapper");
+const getRidOfMovies = document.querySelector(".movies");
 const showSearchResults = document.querySelector(".movie__list");
+const showSearchBarBG = document.querySelector(".search-bar__bg")
+const showSearchBar = document.querySelector(".show__search-bar")
+const showMenu = document.querySelector(".nav__menu--bg")
+
 
 // Because I couldn't figure out how to have full access to all the movies at once
 // this main home screen will just look really messy with all the html having to show
@@ -77,7 +81,7 @@ function userInput() {
         searchResults.innerHTML = `Search Results For " ${inputValue} "`;
 
         showSearchResults.classList += " search__results";
-        getRidOfMovies.classList += " remove";
+        getRidOfMovies.classList += " remove"; 
       }, 1000);
     }
   });
@@ -106,4 +110,33 @@ function movieHTML(movie) {
 
 function refreshPage() {
   window.location.reload("http://127.0.0.1:5500/index.html");
+}
+
+
+function searchBarVisible() {
+
+  if (showSearchBarBG.style.display === "none") {
+    showSearchBarBG.style.display = "flex";
+  }
+  else {
+    showSearchBarBG.style.display = "none"
+  }
+
+  searchInput.addEventListener("keypress", (e) => {
+    let inputValue = e.target.value;
+    if (e.key === "Enter")
+      showSearchBarBG.style.display = "none"
+    getRidOfMovies.classList.remove("main__show-movies");
+  }
+  )
+  showMenu.classList.remove("menu--open")
+      
+}
+
+function openMenu() {
+  showMenu.classList += " menu--open"
+}
+
+function closeMenu() {
+  showMenu.classList.remove("menu--open")
 }
