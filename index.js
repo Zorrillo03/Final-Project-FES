@@ -58,7 +58,7 @@ function userInput() {
 
     if (e.key === "Enter") {
       getRidOfMovies.classList.remove("main__show-movies");
-
+      showSearchResults.classList.remove("search__results") 
       const loading = document.querySelector(".fa-spinner");
       loading.classList += " movie__loading--visible";
 
