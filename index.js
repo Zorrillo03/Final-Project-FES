@@ -19,9 +19,9 @@ const showMenu = document.querySelector(".nav__menu--bg")
 
 // Function showing the movies on the starting screen
 async function main() {
-  let movies = await fetch(`http://www.omdbapi.com/?apikey=c21baa5d&s=fast`);
-  let movies2 = await fetch(`http://www.omdbapi.com/?apikey=c21baa5d&s=work`);
-  let movies3 = await fetch(`http://www.omdbapi.com/?apikey=c21baa5d&s=batman`);
+  let movies = await fetch(`https://cors-anywhere.herokuapp.com/http://www.omdbapi.com/?apikey=c21baa5d&s=fast`);
+  let movies2 = await fetch(`https://cors-anywhere.herokuapp.com/http://www.omdbapi.com/?apikey=c21baa5d&s=work`);
+  let movies3 = await fetch(`https://cors-anywhere.herokuapp.com/http://www.omdbapi.com/?apikey=c21baa5d&s=batman`);
 
   const moviesData = await movies.json();
   const moviesData2 = await movies2.json();
@@ -64,7 +64,7 @@ function userInput() {
 
       setTimeout(async function searchMovies() {
         let movies = await fetch(
-          `http://www.omdbapi.com/?apikey=c21baa5d&s=${inputValue}`
+          `https://cors-anywhere.herokuapp.com/http://www.omdbapi.com/?apikey=c21baa5d&s=${inputValue}`
         );
         const moviesData = await movies.json();
         const moviesSearch = moviesData.Search;
