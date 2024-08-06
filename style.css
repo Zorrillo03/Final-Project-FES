@@ -223,12 +223,30 @@ PROFILE SIDE
   transition: all 250ms ease;
 }
 
+.nav__hover-effect {
+  position: relative;
+}
+
 .nav__hover-effect:hover {
-  border: 2px solid #242424;
   border-radius: 4px;
-  transform: scale(1.1);
-  box-shadow: 0 4px 8px 0;
+  transform: scale(1.05);
   margin-left: 16px;
+}
+
+.nav__hover-effect:after {
+  content: "";
+  position: absolute;
+  background-color: #242424;
+  bottom: -2px;
+  right: 0;
+  width: 0;
+  height: 3px;
+  transition: all 300ms ease;
+}
+
+.nav__hover-effect:hover:after {
+  width: 100%;
+  left: 0;
 }
 
 .nav__profile--mask {
