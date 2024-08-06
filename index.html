@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie search FinalProject</title>
+    <script src="index.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/fb7e0e9049.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav__container">
+        <div class="nav__row">
+          <div class="nav__logo--container cursor" onclick="refreshPage()">
+            <figure class="nav__logo--wrapper">
+              <i class="fa-solid fa-film"></i>
+            </figure>
+            <h1 class="title nav__title">Cinema@Home</h1>
+          </div>
+          <div class="search-bar__bg">
+            <div class="nav__search">
+              <input
+                type="text"
+                class="search-bar"
+                placeholder="Explore"
+                movie-search
+              />
+            </div>
+          </div>
+          <div class="nav__links">
+            <a
+              href="#"
+              class="nav__link nav__hover-effect"
+              onclick="refreshPage()"
+              >Home</a
+            >
+            <div class="nav__border"></div>
+            <a href="#" class="nav__link nav__hover-effect discover--margin noCursor"
+              >Discover</a
+            >
+            <div class="nav__border"></div>
+            <figure>
+              <i
+                class="fa-solid fa-magnifying-glass search-icon nav__hover-effect"
+                onclick="searchBarVisible()"
+              ></i>
+            </figure>
+            <div class="nav__border search-icon__border"></div>
+            <figure class="nav__profile--mask">
+              <img
+                class="nav__profile--pic cursor"
+                src="./finalProjectAssets/HatsuneMiku.webp"
+              />
+              <span class="profile--popper cursor">
+                <i class="fa-solid fa-caret-up"></i>
+              </span>
+            </figure>
+          </div>
+          <figure class="menu__btn--open cursor" onclick="openMenu()">
+            <i class="fa-solid fa-bars cursor"></i>
+          </figure>
+          <div class="nav__menu--bg">
+            <figure class="menu__btn--close cursor" onclick="closeMenu()">
+              <i class="fa-solid fa-x"></i>
+            </figure>
+            <ul class="menu__link--list">
+              <figure class="nav__profile--mask">
+                <img
+                  class="nav__profile--pic cursor"
+                  src="./finalProjectAssets/HatsuneMiku.webp"
+                />
+                <span class="profile--popper cursor">
+                  <i class="fa-solid fa-caret-up"></i>
+                </span>
+              </figure>
+              <figure>
+                <i
+                  class="fa-solid fa-magnifying-glass search-icon"
+                  onclick="searchBarVisible()"
+                ></i>
+              </figure>
+              <a href="#" class="menu__link link__hover-effect" onclick="refreshPage()">Home</a>
+              <a href="#" class="menu__link link__hover-effect  noCursor">Discover</a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section id="site__bg">
+      <div class="site__bg--color">hello</div>
+    </section>
+    <section class="results">
+      <div class="container results__container">
+        <div class="row results__row">
+          <h2 class="search-results"></h2>
+        </div>
+      </div>
+    </section>
+    <section class="movies main__show-movies">
+      <div class="movies__container">
+        <div class="movies__row">
+          <div class="main__movie--wrapper">
+            <div class="movie__list"></div>
+            <div class="movie__list2"></div>
+            <div class="movie__list3"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="movie__loading">
+        <i class="fa-solid fa-spinner"></i>
+      </div>
+    </section>
+    <footer>
+      <div class="footer__container">
+        <div class="footer__row">
+          <div class="footer__links">
+            <a href="#" class="footer__link link__hover-effect">Home</a>
+            <a href="#" class="footer__link link__hover-effect noCursor"
+              >Contact</a
+            >
+            <a href="#" class="footer__link link__hover-effect noCursor"
+              >Company</a
+            >
+            <a href="#" class="footer__link link__hover-effect noCursor"
+              >Careers</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
